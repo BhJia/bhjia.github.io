@@ -4,11 +4,24 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2023/05/09/Attention%20SR/"/>
-      <url>/2023/05/09/Attention%20SR/</url>
+      <title>云计算Assignment9总结</title>
+      <link href="/2023/05/10/%E4%BA%91%E8%AE%A1%E7%AE%97Assignment9%E6%80%BB%E7%BB%93/"/>
+      <url>/2023/05/10/%E4%BA%91%E8%AE%A1%E7%AE%97Assignment9%E6%80%BB%E7%BB%93/</url>
       
-        <content type="html"><![CDATA[<h2 id="Attention相关SR论文"><a href="#Attention相关SR论文" class="headerlink" title="Attention相关SR论文"></a>Attention相关SR论文</h2><h4 id="RCAN"><a href="#RCAN" class="headerlink" title="RCAN"></a>RCAN</h4><p>（ECCV2018)</p><img src="themes/butterfly/source/img/1.png"><p>网络结构分析：</p><p>总体结构：浅层特征提取+RIR深层特征提取+ 上采样+重建</p><p>① 浅层特征提取：conv×1</p><p>② RIR：三层Res block</p><p>大Res block: 多个RG+ long skip connection</p><p>小Res block(RG): 多个RCAB+ short skip connection</p><p>RCAB: 多个conv+ Channel attention + skip connection</p><p><img src="C:\Users\寒\AppData\Roaming\Typora\typora-user-images\image-20230322143310052.png" alt="image-20230322143310052"></p><p>Channel attention</p><p><img src="C:\Users\寒\AppData\Roaming\Typora\typora-user-images\image-20230322143546238.png" alt="image-20230322143546238"></p><p>feature map经过GAP，然后1×1 Conv按缩减比r 进行通道缩减降维，经过ReLu后再通道上采样至原先通道数，然后Sigmoid输出，得到一个类似attention的map，和原先的feature map相乘得到输出通道方向加权的feature map</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="云计算-Assignment9-总结"><a href="#云计算-Assignment9-总结" class="headerlink" title="云计算 Assignment9 总结"></a>云计算 Assignment9 总结</h2><ul><li><p>博客主题及其选取原因</p><p>开始选取了Jeyll框架的相关主题，发现修改配置文件略复杂，故换成Hexo框架，Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub上</p><p>我选取了butterfly主题，该主题较为清晰美观，且文档教程清楚易理解</p></li><li><p>博客页面布局及其设计思路</p></li></ul><p>​页面布局总体沿用butterfly主题的框架，布局主要修改了相关文字、导航栏与各个页面的图像。</p><p>​</p><ul><li><p>博客制作过程中遇到的问题及其解决方法</p><p>① hexo d命令报错 ERROR Deployer not found: git，并且已经安装<code>hexo-deployer-git</code>插件</p><p>解决方案：在项目根目录下重新输入<code>npm install hexo-deployer-git --save</code>安装</p><p>② 要新建导航栏about，在source文件夹中直接新建文件夹无法新建导航栏</p><p>解决方案：在根目录下输入<code>hexo new page &quot;about&quot;</code>，然后修改source文件夹的about&#x2F;index.md即可</p></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>image-super-resolution</title>
+      <link href="/2023/05/10/image-super-resolution/"/>
+      <url>/2023/05/10/image-super-resolution/</url>
+      
+        <content type="html"><![CDATA[<h4 id="RCAN"><a href="#RCAN" class="headerlink" title="RCAN"></a>RCAN</h4><p>（ECCV2018)</p><p>网络结构分析：</p><p>总体结构：浅层特征提取+RIR深层特征提取+ 上采样+重建</p><p>① 浅层特征提取：conv×1</p><p>② RIR：三层Res block</p><p>大Res block: 多个RG+ long skip connection</p><p>小Res block(RG): 多个RCAB+ short skip connection</p><p>RCAB: 多个conv+ Channel attention + skip connection</p><p><strong>Channel attention</strong></p><p>feature map经过GAP，然后1×1 Conv按缩减比r 进行通道缩减降维，经过ReLu后再通道上采样至原先通道数，然后Sigmoid输出，得到一个类似attention的map，和原先的feature map相乘得到输出通道方向加权的feature map</p>]]></content>
       
       
       
@@ -21,15 +34,9 @@
       <link href="/2023/05/09/my-first-blog/"/>
       <url>/2023/05/09/my-first-blog/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>This is my first blog.</p>]]></content>
       
       
-      
-        <tags>
-            
-            <tag> personal </tag>
-            
-        </tags>
       
     </entry>
     
